@@ -1,0 +1,82 @@
+@use "../../styles/variables" as *;
+
+.input__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $grey;
+  border-radius: 8px;
+  padding: 16px;
+  padding-left: 52px;
+  width: 100%;
+  height: 56px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  transition: border 0.3s ease-in-out;
+
+  &::placeholder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.input__light {
+  color: $black;
+  background-color: $white;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.input__dark {
+  color: $white;
+  background-color: $grey;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.input:focus-visible,
+.input:hover {
+  border: 1px solid $purple;
+}
+
+.input__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 16px;
+  pointer-events: none;
+}
+
+.input__container path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.input__container:focus-visible path,
+.input__container:hover path {
+  fill: $purple;
+}
+
+.input__error {
+  position: absolute;
+  left: 52px;
+  top: 3px;
+  font-size: 12px;
+  color: $light-red;
+}
+
+.input_container_error path {
+  fill: $light-red;
+}

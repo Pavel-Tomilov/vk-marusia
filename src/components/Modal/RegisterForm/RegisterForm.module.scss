@@ -1,0 +1,31 @@
+@use "../../../styles/variables" as *;
+
+.register__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 24px;
+  gap: 12px;
+  width: 100%;
+
+  .form:last-of-type {
+    margin-bottom: 12px;
+  }
+}
+
+.register__title {
+  align-self: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: $black;
+}
+
+.register__error {
+  position: absolute;
+  bottom: -15px;
+  left: 28px;
+  font-size: 12px;
+  color: $light-red;
+}

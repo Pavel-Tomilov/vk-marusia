@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo__icon {
+  width: 25px;
+  height: 32px;
+}
+
+.logo__text {
+  margin-top: 6px;
+  align-self: center;
+  width: 99px;
+  height: 21px;
+}
+
+.logo__text_black path {
+  fill: $black;
+}
+
+@media (max-width: 576px) {
+  .logo__small .logo__icon {
+    width: 13px;
+    height: 17px;
+  }
+
+  .logo__small .logo__text {
+    width: 57px;
+    height: 13px;
+  }
+}

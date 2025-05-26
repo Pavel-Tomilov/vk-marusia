@@ -1,0 +1,70 @@
+@use "../../styles/variables" as *;
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: $white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &__text {
+    white-space: nowrap;
+    padding: 16px 48px;
+  }
+
+  &__icon {
+    padding: 18px 24px;
+    width: 68px;
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__blue {
+    background-color: $blue;
+
+    &:focus-visible,
+    &:hover {
+      background-color: $dark-blue;
+    }
+
+    &:disabled {
+      background-color: #45526e;
+    }
+  }
+
+  &__grey {
+    background-color: $grey;
+
+    &:focus-visible,
+    &:hover {
+      background-color: $dark-grey;
+    }
+
+    &:disabled {
+      background-color: #747474;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:disabled path {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .button__text {
+    padding: 16px 37px;
+  }
+}

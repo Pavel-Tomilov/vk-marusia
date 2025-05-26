@@ -1,0 +1,81 @@
+@use "../../styles/variables" as *;
+
+.movie__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+
+  &_small {
+    margin-bottom: 8px;
+    gap: 12px;
+  }
+
+  &_small .movie__rating,
+  &_small .movie__release,
+  &_small .movie__genres,
+  &_small .movie__runtime {
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  &_small .movie__rating {
+    padding: 2px 8px 2px 22px;
+    font-size: 12px;
+    background-position: 8px center;
+    background-size: 10px 10px;
+  }
+}
+
+.movie__rating {
+  border-radius: 16px;
+  padding: 4px 12px 4px 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: $white;
+  background-image: url("../../assets/icons/star.svg");
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.movie__rating_excellent {
+  background-color: $gold;
+}
+
+.movie__rating_good {
+  background-color: $green;
+}
+
+.movie__rating_poor {
+  background-color: $light-grey;
+}
+
+.movie__rating_bullshit {
+  background-color: $red;
+}
+
+.movie__release,
+.movie__genres,
+.movie__runtime {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .movie__release,
+  .movie__genres,
+  .movie__runtime {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+
+@media (max-width: 576px) {
+  .movie__info_small {
+    flex-wrap: wrap;
+  }
+}

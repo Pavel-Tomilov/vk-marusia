@@ -1,0 +1,104 @@
+.search {
+  position: relative;
+  width: 100%;
+}
+.search__dropdown, .search__dropdown_new {
+  position: absolute;
+  right: 0;
+  top: 61px;
+  z-index: 99999;
+  max-width: 559px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #393b3c;
+}
+.search__loading, .search__no-results {
+  padding: 20px 8px;
+}
+.search__close {
+  position: absolute;
+  right: 17px;
+  top: 21px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search__close:focus-visible path, .search__close:hover path {
+  fill: #b4a9ff;
+}
+.search .search__icon {
+  display: none;
+}
+
+.modal-search {
+  position: relative;
+  width: calc(100% - 60px);
+  outline: none;
+}
+.modal-search__content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+.modal-search__close {
+  position: absolute;
+  outline: none;
+  border: none;
+  top: 27px;
+  right: 21px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+  background-color: transparent;
+}
+.modal-search__close path {
+  fill-opacity: 1;
+  transition: fill 0.3s ease-in-out;
+}
+.modal-search__close:focus-visible path, .modal-search__close:hover path {
+  fill: #b4a9ff;
+}
+
+@media (max-width: 992px) {
+  .search__dropdown {
+    width: calc(100% + 72px);
+  }
+}
+@media (max-width: 768px) {
+  .search {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .search__close,
+  .search .search__dropdown,
+  .search :global(.input__wrapper) {
+    display: none;
+  }
+  .search .search__icon {
+    display: block;
+  }
+  .search__dropdown_new {
+    max-width: 100%;
+    width: 100%;
+    top: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-search {
+    max-width: 345px;
+    width: 100%;
+  }
+  .search__dropdown_new {
+    display: flex;
+    padding: 24px 20px;
+    gap: 16px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}/*# sourceMappingURL=HeaderSearch.module.css.map */

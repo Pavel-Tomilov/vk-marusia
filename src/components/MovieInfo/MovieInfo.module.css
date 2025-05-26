@@ -1,0 +1,72 @@
+.movie__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.movie__info_small {
+  margin-bottom: 8px;
+  gap: 12px;
+}
+.movie__info_small .movie__rating, .movie__info_small .movie__release, .movie__info_small .movie__genres, .movie__info_small .movie__runtime {
+  font-size: 14px;
+  line-height: 143%;
+}
+.movie__info_small .movie__rating {
+  padding: 2px 8px 2px 22px;
+  font-size: 12px;
+  background-position: 8px center;
+  background-size: 10px 10px;
+}
+
+.movie__rating {
+  border-radius: 16px;
+  padding: 4px 12px 4px 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #ffffff;
+  background-image: url("../../assets/icons/star.svg");
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.movie__rating_excellent {
+  background-color: #a59400;
+}
+
+.movie__rating_good {
+  background-color: #308e21;
+}
+
+.movie__rating_poor {
+  background-color: #777777;
+}
+
+.movie__rating_bullshit {
+  background-color: #c82020;
+}
+
+.movie__release,
+.movie__genres,
+.movie__runtime {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .movie__release,
+  .movie__genres,
+  .movie__runtime {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+@media (max-width: 576px) {
+  .movie__info_small {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=MovieInfo.module.css.map */

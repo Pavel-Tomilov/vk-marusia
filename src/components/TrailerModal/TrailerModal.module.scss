@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+
+.trailer {
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: $grey;
+
+    &:hover :global(.controls__visible) {
+      opacity: 1;
+    }
+  }
+
+  &__overlay_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &__close {
+    position: absolute;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    top: 0;
+    right: -64px;
+    font-size: 24px;
+    background-color: $white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:focus-visible,
+    &:hover {
+      color: $purple;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .trailer__wrapper {
+    width: 760px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  .trailer__wrapper {
+    width: 560px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trailer__close {
+    z-index: 9999;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .trailer__wrapper {
+    width: 345px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .trailer__wrapper {
+    width: 643px;
+    height: 345px;
+  }
+}

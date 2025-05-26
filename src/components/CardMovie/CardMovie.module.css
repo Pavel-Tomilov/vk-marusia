@@ -1,0 +1,104 @@
+.card__movie {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  width: 224px;
+  height: 336px;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  background-color: #3c3c3c;
+  overflow: visible;
+}
+
+.card__poster {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+  transition: scale 0.3s ease-in-out;
+}
+
+:global(.movie__link):focus-visible .card__poster,
+:global(.movie__link):hover .card__poster {
+  scale: 1.07;
+}
+
+.card__no-poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: inherit;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+:global(.movie__link):focus-visible .card__no-poster,
+:global(.movie__link):hover .card__no-poster {
+  background-color: #282828;
+}
+
+.card__no-poster-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  word-wrap: break-word;
+  text-align: center;
+  transition: scale 0.3s ease-in-out;
+}
+
+.movie__link:focus-visible .card__title,
+.movie__link:hover .card__title {
+  scale: 1.1;
+}
+
+.card__number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: #6a5dc2;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.card__movie_favorites {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .card__movie {
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.33);
+  }
+  .card__movie_genre {
+    box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  }
+}
+@media (max-width: 576px) {
+  .card__movie_genre {
+    width: 335px;
+    height: 502px;
+  }
+  .favorites__link:focus-visible .card__poster,
+  .favorites__link:hover .card__poster {
+    scale: 1;
+  }
+  .favorites__link:focus-visible .card__movie_favorites,
+  .favorites__link:hover .card__movie_favorites {
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.9);
+  }
+}/*# sourceMappingURL=CardMovie.module.css.map */

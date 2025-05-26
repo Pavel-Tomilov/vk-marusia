@@ -1,0 +1,124 @@
+@use "../../../styles/variables" as *;
+
+.search {
+  position: relative;
+  width: 100%;
+
+  &__dropdown,
+  &__dropdown_new {
+    position: absolute;
+    right: 0;
+    top: 61px;
+    z-index: 99999;
+    max-width: 559px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: $grey;
+  }
+
+  &__loading,
+  &__no-results {
+    padding: 20px 8px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 17px;
+    top: 21px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__close:focus-visible path,
+  &__close:hover path {
+    fill: $purple;
+  }
+
+  & .search__icon {
+    display: none;
+  }
+}
+
+.modal-search {
+  position: relative;
+  width: calc(100% - 60px);
+  outline: none;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  &__close {
+    position: absolute;
+    outline: none;
+    border: none;
+    top: 27px;
+    right: 21px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease-in-out;
+    background-color: transparent;
+
+    & path {
+      fill-opacity: 1;
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus-visible path,
+    &:hover path {
+      fill: $purple;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .search__dropdown {
+    width: calc(100% + 72px);
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: min-content;
+  }
+
+  .search__close,
+  .search .search__dropdown,
+  .search :global(.input__wrapper) {
+    display: none;
+  }
+
+  .search .search__icon {
+    display: block;
+  }
+
+  .search__dropdown_new {
+    max-width: 100%;
+    width: 100%;
+    top: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-search {
+    max-width: 345px;
+    width: 100%;
+  }
+
+  .search__dropdown_new {
+    display: flex;
+    padding: 24px 20px;
+    gap: 16px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}

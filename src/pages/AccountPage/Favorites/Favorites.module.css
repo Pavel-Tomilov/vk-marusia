@@ -1,0 +1,57 @@
+.favorites__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 224px);
+  justify-content: space-evenly;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 64px;
+}
+
+.favorites__item {
+  position: relative;
+}
+
+.favorites__delete {
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  right: -20px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background-color: #ffffff;
+  z-index: 10000;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.favorites__delete:focus-visible,
+.favorites__delete:hover {
+  opacity: 1;
+  color: #b4a9ff;
+}
+
+.favorites__link:focus-visible + .favorites__delete,
+.favorites__link:hover + .favorites__delete {
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .favorites__list {
+    display: flex;
+    gap: 40px;
+  }
+  .favorites__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    width: calc(100% + 20px);
+    scrollbar-width: none;
+  }
+}/*# sourceMappingURL=Favorites.module.css.map */

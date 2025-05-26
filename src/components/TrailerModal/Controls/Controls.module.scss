@@ -1,0 +1,48 @@
+@use "../../../styles/variables" as *;
+
+.controls {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.controls__title {
+  position: absolute;
+  z-index: 999999;
+  bottom: 24px;
+  margin-left: 24px;
+  padding: 24px 40px;
+  width: calc(100% - 48px);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: $white;
+  background-color: rgba(10, 11, 11, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .controls svg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .controls__title {
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .controls__title {
+    bottom: auto;
+  }
+}

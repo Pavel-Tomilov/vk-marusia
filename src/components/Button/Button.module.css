@@ -1,0 +1,55 @@
+.button {
+  outline: none;
+  border: none;
+  border-radius: 28px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.button__text {
+  white-space: nowrap;
+  padding: 16px 48px;
+}
+.button__icon {
+  padding: 18px 24px;
+  width: 68px;
+}
+.button svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.button__blue {
+  background-color: #67a5eb;
+}
+.button__blue:focus-visible, .button__blue:hover {
+  background-color: #275e9d;
+}
+.button__blue:disabled {
+  background-color: #45526e;
+}
+.button__grey {
+  background-color: #393b3c;
+}
+.button__grey:focus-visible, .button__grey:hover {
+  background-color: #282828;
+}
+.button__grey:disabled {
+  background-color: #747474;
+}
+.button:disabled {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.button:disabled path {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .button__text {
+    padding: 16px 37px;
+  }
+}/*# sourceMappingURL=Button.module.css.map */

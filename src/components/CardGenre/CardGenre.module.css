@@ -1,0 +1,39 @@
+.card__genre {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  width: 290px;
+  height: 304px;
+  box-shadow: 0 0 80px 0 rgba(255, 255, 255, 0.33);
+  background-color: #616161;
+  background-repeat: no-repeat;
+  background-size: auto 220px;
+  background-position: top center;
+  transition: scale 0.3s ease-in-out;
+}
+
+.card__text {
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  width: 100%;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+:global(.movie__link):focus-visible .card__genre,
+:global(.movie__link):hover .card__genre {
+  scale: 1.07;
+}
+
+@media (max-width: 670px) {
+  .card__genre {
+    width: 335px;
+  }
+}/*# sourceMappingURL=CardGenre.module.css.map */

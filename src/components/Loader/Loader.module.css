@@ -1,0 +1,62 @@
+@keyframes first {
+  0%, 33.3%, 100% {
+    transform: translateY(0);
+  }
+  66.6% {
+    transform: translateY(10px);
+  }
+}
+@keyframes second {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  33.3%, 66.6% {
+    transform: translateY(0);
+  }
+}
+@keyframes third {
+  0%, 66.6%, 100% {
+    transform: translateY(0);
+  }
+  33.3% {
+    transform: translateY(10px);
+  }
+}
+.loader__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  height: 20px;
+}
+
+.loader__item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #6a5dc2;
+}
+
+.loader__item:nth-of-type(2n) {
+  animation: second 1.05s linear infinite;
+}
+
+.loader__item:nth-of-type(2n + 1) {
+  animation: third 1.05s linear infinite;
+}
+
+.loader__item:first-of-type {
+  animation: first 1.05s linear infinite;
+}/*# sourceMappingURL=Loader.module.css.map */

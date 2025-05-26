@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2020",
+    "lib": ["ESNext", "DOM"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "types": ["jest"]
+  },
+  "include": ["src", "vite-env.d.ts"]
+}

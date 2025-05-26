@@ -1,0 +1,89 @@
+.modal {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  outline: none;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, height 0.3s ease-in-out;
+}
+.modal.ReactModal__Content--after-open {
+  transform: scale(1);
+}
+.modal.ReactModal__Content--before-close {
+  transform: scale(0.95);
+}
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.modal__close {
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  top: 0;
+  right: -64px;
+  font-size: 24px;
+  background-color: #ffffff;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+}
+.modal__close:focus-visible, .modal__close:hover {
+  color: #b4a9ff;
+}
+
+.modal__form_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.modal__logo {
+  margin-bottom: 40px;
+}
+
+.modal__form_btn {
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.modal__form_btn:focus-visible,
+.modal__form_btn:hover {
+  color: #b4a9ff;
+}
+
+@media (max-width: 576px) {
+  .modal {
+    max-width: 335px;
+  }
+  .modal__content {
+    padding: 60px 20px 32px 20px;
+  }
+  .modal__close {
+    top: 8px;
+    right: 8px;
+  }
+  .modal__logo {
+    margin-bottom: 27px;
+  }
+}/*# sourceMappingURL=AuthModal.module.css.map */
